@@ -23,13 +23,11 @@ const FooterWrapper = styled.footer`
 
 const StickyFooterLayout = (props: IProps) => (
   <Layout>
-    <ChildrenWrapper>
-      {props.children}
-    </ChildrenWrapper>
+    <ChildrenWrapper>{props.children}</ChildrenWrapper>
     <FooterWrapper>
-      {props.Footer ? props.Footer : <DefaultFooter/>}
+      {props.Footer ? props.Footer : <DefaultFooter />}
     </FooterWrapper>
   </Layout>
-)
-  
+);
+
 export default StickyFooterLayout;

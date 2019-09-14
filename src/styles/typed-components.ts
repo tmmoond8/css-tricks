@@ -1,4 +1,4 @@
-import * as styledComponents from "styled-components";
+import * as styledComponents from 'styled-components';
 import { Theme } from './theme';
 
 type StyledFunction<T> = styledComponents.ThemedStyledFunction<any, Theme>;
@@ -14,7 +14,7 @@ const {
   css,
   createGlobalStyle,
   keyframes,
-  ThemeProvider
+  ThemeProvider,
 } = styledComponents as styledComponents.ThemedStyledComponentsModule<Theme>;
 
 export { css, createGlobalStyle, keyframes, ThemeProvider, withProps };

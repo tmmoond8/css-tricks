@@ -9,10 +9,6 @@ const StyledFooter = styled.div`
   text-align: center;
 `;
 
-const Footer = () => (
-  <StyledFooter>
-    this is footer
-  </StyledFooter>
-)
+const Footer = () => <StyledFooter>this is footer</StyledFooter>;
 
 export default Footer;

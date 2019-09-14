@@ -40,11 +40,13 @@
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
-    "@types/styled-components": "^4.1.18",
-    "@storybook/react": "^5.1.10",
     "@storybook/addon-actions": "^5.1.10",
     "@storybook/addon-links": "^5.1.10",
     "@storybook/addons": "^5.1.10",
-    "babel-loader": "^8.0.6"
+    "@storybook/react": "^5.1.10",
+    "@types/styled-components": "^4.1.18",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-react": "^4.0.0"
   }
 }
