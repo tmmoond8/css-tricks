@@ -1,6 +1,6 @@
 {
   "editor.formatOnSave": true,
-  "eslint.autoFixOnSave": true,
+  "tslint.autoFixOnSave": true,
   "javascript.format.enable": false,
   "codemetrics.basics.CodeLensEnabled": true
 }
