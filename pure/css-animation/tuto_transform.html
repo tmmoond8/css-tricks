@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .transform {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .transform>li {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      height: 200px;
+      list-style: none;
+      box-shadow: inset 0 0 0px 50px white, inset 0 0 0px 100px pink;
+    }
+
+    .transform>li>p {
+      position: absolute;
+      bottom: 0px;
+    }
+
+    .transform.transition .box {
+      transition: all 1s;
+    }
+
+    .box {
+      height: 100px;
+      width: 100px;
+      margin: auto;
+      background-image: url("https://res.cloudinary.com/dgggcrkxq/image/upload/v1566951043/noticon/mwlnqwvswaln1qpz43b6.png");
+      background-size: contain;
+      border: 1px dashed #888;
+    }
+
+    .transform:hover .scale {
+      transform: scale(1.5);
+    }
+
+    .transform:hover .rotate {
+      transform: rotate(40deg);
+    }
+
+    .transform:hover .translateX {
+      transform: translateX(20px)
+    }
+
+    .transform:hover .translate {
+      transform: translate(20px, -20px);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>CSS ANIMATION</h1>
+  <h2>transform</h2>
+  <ul class="transform">
+    <li>
+      <div class="box scale"></div>
+      <p>scale</p>
+    </li>
+    <li>
+      <div class="box rotate"></div>
+      <p>rotation</p>
+    </li>
+    <li>
+      <div class="box translateX"></div>
+      <p>translateX</p>
+    </li>
+    <li>
+      <div class="box translate"></div>
+      <p>translate</p>
+    </li>
+  </ul>
+  <ul class="transform transition">
+    <li>
+      <div class="box scale"></div>
+      <p>scale</p>
+    </li>
+    <li>
+      <div class="box rotate"></div>
+      <p>rotation</p>
+    </li>
+    <li>
+      <div class="box translateX"></div>
+      <p>translateX</p>
+    </li>
+    <li>
+      <div class="box translate"></div>
+      <p>translate</p>
+    </li>
+  </ul>
+</body>
+
+</html>
