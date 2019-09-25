@@ -1,0 +1,11 @@
+div {
+  height: 24px;
+  width: 320px;
+  line-height: 24px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+form input[type='number'] {
+  width: 40px;
+}
