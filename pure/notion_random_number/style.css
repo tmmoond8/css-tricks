@@ -1,11 +1,68 @@
 div {
-  height: 24px;
   width: 320px;
-  line-height: 24px;
   margin: 0 auto;
-  border: 1px solid black;
+  padding: 30px;
 }
 
-form input[type='number'] {
+form {
+  display: flex;
+  align-items: center;
+}
+
+form .input-wrapper {
+  display: flex;
+  align-items: center;
   width: 40px;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 3px 6px;
+  position: relative;
+  border-radius: 3px;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px inset,
+    rgba(15, 15, 15, 0.1) 0px 1px 1px inset;
+  background: rgba(242, 241, 238, 0.6);
+  cursor: text;
+  height: 28px;
+}
+form input[type='number'] {
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  background: none;
+  width: 100%;
+  display: block;
+  resize: none;
+  padding: 0px;
+  outline: none;
+  text-align: center;
+}
+
+form input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+  transition: background 120ms ease-in 0s;
+  white-space: nowrap;
+  height: 28px;
+  border-radius: 3px;
+  background: rgb(46, 170, 220);
+  color: white;
+  fill: white;
+  line-height: 1.2;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: rgba(15, 15, 15, 0.1) 0px 0px 0px 1px inset,
+    rgba(15, 15, 15, 0.1) 0px 1px 2px;
+  width: 100%;
+  max-width: 100px;
+  margin: auto;
+  outline: none;
+}
+
+#random_number {
+  text-align: center;
 }

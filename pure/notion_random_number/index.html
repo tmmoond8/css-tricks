@@ -1,15 +1,76 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport"
+      content="width=device-width,minimum-scale=1,initial-scale=1"><meta
+      charset="utf-8"><title>Random Number</title>
+    <meta name="og:title" content="random number for Notion">
+    <meta name="og:description" content="random number for Notion">
+    <meta name="og:image"
+      content="https://user-images.githubusercontent.com/11402468/63695688-2c723100-c854-11e9-905b-8bd5c9555894.png">
+    <meta name="og:image:type" content="image/png">
+    <meta name="og:url"
+      content="https://tmmoond8.github.io/css-tricks/pure/notion_random_number/">
+    <meta name="og:locale" content="ko_KR">
+    <meta name="og:site_name" content="random number">
+    <meta name="og:image:width" content="346">
+    <meta name="og:image:height" content="196">
+    <link rel="shortcut icon"
+      href="https://res.cloudinary.com/dgggcrkxq/image/upload/v1566826573/noticon/favicon_j7lf1k.ico">
     <link href="./style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div>
       <form>
-        <input type="number" value="1" name="min" />
+        <div class="input-wrapper">
+          <input type="number" value="1" name="min"
+            />
+        </div>
         and
-        <input type="number" value="1" name="max" />
+        <div class="input-wrapper">
+          <input type="number" value="100" name="max"
+            />
+        </div>
+        <button>Generate</button>
       </form>
+      <h2 id="random_number"></h2>
     </div>
+    <script>
+      const inputs = document.querySelectorAll('input');
+      inputs.forEach(el => {
+        el.addEventListener('keyup', e => {
+          if (e.code === "Minus") {
+            e.target.value = e.target.getAttribute('value');
+            e.preventDefault();
+            return;
+          }
+          if(e.target.value >= 999 && e.code.startsWith("Digit")) {
+            e.target.value = 999;
+            e.preventDefault();
+          }
+        })
+      })
+
+      const randomNumber = ({min, max}) => {
+        const range = max - min;
+        if (range < 0) {
+          return "watch your numbers.."
+        }
+        return String(Math.floor(Math.random() * (range + 1) ) + min);
+      }
+
+      const button = document.querySelector('button');
+      button.onclick = (e) => {
+        e.preventDefault();
+        const inputs = document.querySelectorAll('input');
+        const value = {
+          [inputs[0].name]: parseInt(inputs[0].value),
+          [inputs[1].name]: parseInt(inputs[1].value),
+        }
+        
+        console.log(randomNumber(value));
+        document.querySelector('#random_number').textContent = randomNumber(value)
+      }
+    </script>
   </body>
 </html>
