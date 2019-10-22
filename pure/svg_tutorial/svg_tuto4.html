@@ -1,0 +1,87 @@
+<html>
+
+<head></head>
+
+<body>
+  <a href="https://developer.mozilla.org/ko/docs/Web/SVG/Tutorial/Gradients">
+    <h1>Gradients in SVG</h2>
+  </a>
+  <h2>Radial Gradient</h2>
+  <svg width="120" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="radial_gradients">
+        <stop offset="0%" stop-color="red" />
+        <stop offset="100%" stop-color="blue" />
+      </radialGradient>
+    </defs>
+
+    <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#radial_gradients)" />
+
+  </svg>
+  <svg width="120" height="120" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="radial_gradients_smal" cx="0.25" cy="0.25" r="0.25">
+        <stop offset="0%" stop-color="red" />
+        <stop offset="100%" stop-color="blue" />
+      </radialGradient>
+    </defs>
+
+    <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#radial_gradients_smal)" />
+
+  </svg>
+  <br>
+  <svg width="240" height="240" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="radial_gradients_1" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.25">
+        <stop offset="0%" stop-color="red" />
+        <stop offset="100%" stop-color="blue" />
+      </radialGradient>
+      <radialGradient id="radial_gradients_2" cx="0.5" cy="0.5" r="0.5" fx="0.75" fy="0.25">
+        <stop offset="0%" stop-color="red" />
+        <stop offset="100%" stop-color="blue" />
+      </radialGradient>
+      <radialGradient id="radial_gradients_3" cx="0.5" cy="0.5" r="0.5" fx="0.25" fy="0.75">
+        <stop offset="0%" stop-color="red" />
+        <stop offset="100%" stop-color="blue" />
+      </radialGradient>
+      <radialGradient id="radial_gradients_4" cx="0.5" cy="0.5" r="0.5" fx="0.75" fy="0.75">
+        <stop offset="0%" stop-color="red" />
+        <stop offset="100%" stop-color="blue" />
+      </radialGradient>
+    </defs>
+
+    <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#radial_gradients_1)" />
+    <rect x="120" y="10" rx="15" ry="15" width="100" height="100" fill="url(#radial_gradients_2)" />
+    <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#radial_gradients_3)" />
+    <rect x="120" y="120" rx="15" ry="15" width="100" height="100" fill="url(#radial_gradients_4)" />
+
+  </svg>
+  <br>
+  <svg width="220" height="220" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <radialGradient id="gradient_pad" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75" spreadMethod="pad">
+        <stop offset="0%" stop-color="red" />
+        <stop offset="100%" stop-color="blue" />
+      </radialGradient>
+      <radialGradient id="gradient_repeat" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75" spreadMethod="repeat">
+        <stop offset="0%" stop-color="red" />
+        <stop offset="100%" stop-color="blue" />
+      </radialGradient>
+      <radialGradient id="gradient_reflect" cx="0.5" cy="0.5" r="0.4" fx="0.75" fy="0.75" spreadMethod="reflect">
+        <stop offset="0%" stop-color="red" />
+        <stop offset="100%" stop-color="blue" />
+      </radialGradient>
+    </defs>
+
+    <rect x="10" y="10" rx="15" ry="15" width="100" height="100" fill="url(#gradient_pad)" />
+    <rect x="10" y="120" rx="15" ry="15" width="100" height="100" fill="url(#gradient_repeat)" />
+    <rect x="120" y="120" rx="15" ry="15" width="100" height="100" fill="url(#gradient_reflect)" />
+
+    <text x="15" y="30" fill="white" font-family="sans-serif" font-size="12pt">Pad</text>
+    <text x="15" y="140" fill="white" font-family="sans-serif" font-size="12pt">Repeat</text>
+    <text x="125" y="140" fill="white" font-family="sans-serif" font-size="12pt">Reflect</text>
+
+  </svg>
+</body>
+
+</html>
